@@ -4,14 +4,16 @@ enum Colors {
     Blue,
 }
 
+fn print_color(color: Colors) {
+    match color {
+        Colors::Red => println!("red"),
+        Colors::Green => println!("green"),
+        Colors::Blue => println!("blue"),
+    }
+}
+
 fn main() {
-    match Colors::Red  {
-        _ => println!("{}", "Red"),
-    }
-    match Colors::Green {
-        _ => println!("{}", "Green"),
-    }
-    match Colors::Blue {
-        _ => println!("{}", "Blue"),
-    }
+    print_color(Colors::Red);
+    print_color(Colors::Green);
+    print_color(Colors::Blue);
 }
